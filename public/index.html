@@ -1,150 +1,142 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Budget</title>
-    <meta name="description" content="A free personal budger app">
-    <meta name="keywords" content="app free budget finance">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="main.css">
+  <meta charset="utf-8" />
+  <title>Personal Budget – Track Spending & Stay on Budget</title>
+  <meta name="description" content="A free personal budget app to track spending, set limits, and stay on budget." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO -->
+  <link rel="canonical" href="http://167.71.187.220/pb/" />
+
+  <!-- Social (Open Graph) -->
+  <meta property="og:title" content="Personal Budget" />
+  <meta property="og:description" content="Track spending and stay on budget." />
+  <meta property="og:url" content="http://167.71.187.220/pb/" />
+  <meta property="og:image" content="http://167.71.187.220/pb/bg.png" />
+
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="main.css" />
+
+  <style>
+    /* a11y: make skip link visible on keyboard focus */
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+    }
+    .skip-link:focus {
+      left: 1rem;
+      top: 1rem;
+      background: #000;
+      color: #fff;
+      padding: .5rem .75rem;
+      z-index: 1000;
+    }
+  </style>
 </head>
 <body>
+  <!-- a11y: skip to main landmark -->
+  <a href="#content" class="skip-link">Skip to main content</a>
 
-<a href="#main" class="skip">Skip to content</a>
-
-    <nav>
-        <ul>
-            <li><a href="/">Homepage</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/login.html">Login</a></li>
-            <li><a href="https://google.com">Google</a></li>
-        </ul>
-    </nav>
-
+  <header>
     <div class="hero">
-        <h1>Personal Budget</h1>
-        <h2>A personal-budget management app</h2>
+      <h1>Personal Budget</h1>
+      <p class="tagline">A personal-budget management app</p>
     </div>
 
-    <main class="center" id="main">
+    <!-- a11y: label the primary navigation, mark current page -->
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="https://google.com">Google</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <div class="page-area">
+  <!-- semantic: main landmark -->
+  <main id="content" class="center">
+    <div class="page-area">
+      <!-- semantic: sections with proper heading hierarchy -->
+      <section aria-labelledby="stay-on-track">
+        <h2 id="stay-on-track">Stay on track</h2>
+        <p>
+          Do you know where you are spending your money? If you really stop to track it down,
+          you would get surprised! Proper budget management depends on real data... and this
+          app will help you with that!
+        </p>
+      </section>
 
-            <article>
-                <h1>Stay on track</h1>
-                <p>
-                    Do you know where you are spending your money? If you really stop to track it down,
-                    you would get surprised! Proper budget management depends on real data... and this
-                    app will help you with that!
-                </p>
-            </article>
-    
-            <article>
-                <h1>Alerts</h1>
-                <p>
-                    What if your clothing budget ended? You will get an alert. The goal is to never go over the budget.
-                </p>
-            </article>
-    
-            <article>
-                <h1>Results</h1>
-                <p>
-                    People who stick to a financial plan, budgeting every expense, get out of debt faster!
-                    Also, they to live happier lives... since they expend without guilt or fear... 
-                    because they know it is all good and accounted for.
-                </p>
-            </article>
-    
-            <article>
-                <h1>Free</h1>
-                <p>
-                    This app is free!!! And you are the only one holding your data!
-                </p>
-            </article>
-    
-            <article>
-                <h1>Stay on track</h1>
-                <p>
-                    Do you know where you are spending your money? If you really stop to track it down,
-                    you would get surprised! Proper budget management depends on real data... and this
-                    app will help you with that!
-                </p>
-            </article>
-    
-            <article>
-                <h1>Alerts</h1>
-                <p>
-                    What if your clothing budget ended? You will get an alert. The goal is to never go over the budget.
-                </p>
-            </article>
-    
-            <article>
-                <h1>Results</h1>
-                <p>
-                    People who stick to a financial plan, budgeting every expense, get out of debt faster!
-                    Also, they to live happier lives... since they expend without guilt or fear... 
-                    because they know it is all good and accounted for.
-                </p>
-            </article>
-    
-            <article>
-                <h1>Chart</h1>
-                <p>
-                    <canvas id="myChart" width="400" height="400"></canvas>
-                </p>
-            </article>
+      <section aria-labelledby="alerts">
+        <h2 id="alerts">Alerts</h2>
+        <p>
+          What if your clothing budget ended? You will get an alert. The goal is to never go over the budget.
+        </p>
+      </section>
 
-        </div>
+      <section aria-labelledby="results">
+        <h2 id="results">Results</h2>
+        <p>
+          People who stick to a financial plan, budgeting every expense, get out of debt faster!
+          Also, they live happier lives since they spend without guilt or fear—because they know it’s all accounted for.
+        </p>
+      </section>
 
-    </main>
+      <section aria-labelledby="free">
+        <h2 id="free">Free</h2>
+        <p>
+          This app is free—and you are the only one holding your data!
+        </p>
+      </section>
 
-    <footer class="bottom">
-        <div class="center">
-            All rights reserved &copy; Fabio Nolasco
-        </div>
-    </footer>
+      <!-- chart area with a11y labeling -->
+      <section aria-labelledby="chart">
+        <h2 id="chart">Spending breakdown</h2>
+        <figure aria-describedby="chart-desc">
+          <canvas id="myChart" width="400" height="400" role="img" aria-label="Spending categories pie chart"></canvas>
+          <figcaption id="chart-desc">Pie chart of spending by category.</figcaption>
+        </figure>
+      </section>
+    </div>
+  </main>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
+  <footer class="bottom">
+    <div class="center">
+      All rights reserved &copy; 2025 Personal Budget
+    </div>
+  </footer>
 
-    <script>
-        var dataSource = {
-                datasets: [
-                    {
-                        data: [],
-                        backgroundColor: [
-                            '#ffcd56',
-                            '#ff6384',
-                            '#36a2eb',
-                            '#fd6b19',
-                        ]
-                    }
-                ],
-                labels: []
-            };
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
 
-        function createChart() {
-            var ctx = document.getElementById('myChart').getContext('2d');
-            var myPieChart = new Chart(ctx, {
-                type: 'pie',
-                data: dataSource
-            });
+  <script>
+    var dataSource = {
+      datasets: [{ data: [], backgroundColor: ['#ffcd56','#ff6384','#36a2eb','#fd6b19'] }],
+      labels: []
+    };
+
+    function createChart() {
+      var ctx = document.getElementById('myChart').getContext('2d');
+      new Chart(ctx, { type: 'pie', data: dataSource });
+    }
+
+    function getBudget() {
+      // NOTE: 'http://localhost:3000/budget' won't work on your live server.
+      // If you stand up an API on the droplet, change to a relative path like '/budget'.
+      // For now this will fail in production unless you have that endpoint.
+      axios.get('/budget')
+      .then(function (res) {
+        for (var i = 0; i < res.data.myBudget.length; i++) {
+          dataSource.datasets[0].data[i] = res.data.myBudget[i].budget;
+          dataSource.labels[i]      = res.data.myBudget[i].title;
         }
+        createChart();
+      })
+      .catch(function(){ /* fail quietly on static host */ });
+    }
 
-        function getBudget() {
-            axios.get('http://localhost:3000/budget')
-            .then(function (res) {
-                for (var i = 0; i < res.data.myBudget.length; i++) {
-                    dataSource.datasets[0].data[i] = res.data.myBudget[i].budget;
-                    dataSource.labels[i] = res.data.myBudget[i].title;
-                    createChart();
-                }
-            });
-        }
-
-        getBudget();
-    </script>
-
+    getBudget();
+  </script>
 </body>
 </html>
